@@ -6,13 +6,13 @@ const Layout = lazy(() => import('../layout/Layout'));
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
 const Projects = lazy(() => import('../pages/Projects'));
-const NotFoundPage = lazy(() => import('../pages/NotFound'));
+const NotFound = lazy(() => import('../pages/NotFound'));
 
-export const Router = createBrowserRouter([
+export const Routes = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
-        errorElement: <NotFoundPage />,
+        errorElement: <NotFound />,
         children: [
             {
                 path: "",
@@ -38,21 +38,13 @@ export const Router = createBrowserRouter([
                     </Suspense>
                 ),
             },
-            {
-                path: "*",
-                element: (
-                    <Suspense fallback={<div>Loading not found page...</div>}>
-                        <NotFoundPage />
-                    </Suspense>
-                ),
-            },
         ],
     },
     {
         path: "*",
         element: (
             <Suspense fallback={<div>Loading not found page...</div>}>
-                <NotFoundPage />
+                <NotFound />
             </Suspense>
         ),
     },

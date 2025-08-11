@@ -1,9 +1,8 @@
-import React from 'react';
 
 const Home = () => {
     return (
-        <div>
-            
+        <div className='bg-backdrop-500 min-h-screen text-white'>
+            this is home page
         </div>
     );
 };
