@@ -9,7 +9,7 @@ const Header = () => {
         }`
 
     return (
-        <header className="grid grid-cols-10 items-center text-slate-400 border-b border-slate-500 overflow-hidden">
+        <header className="md:grid grid-cols-10 items-center hidden text-slate-400 border-b border-slate-500 overflow-hidden">
             <span className="px-7 col-span-2">hasibul-hasan</span>
             <nav className="col-span-8 flex items-center">
                 <NavLink to="/" className={linkClasses}>
