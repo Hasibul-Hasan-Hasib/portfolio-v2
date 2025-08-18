@@ -1,4 +1,4 @@
-import { IconBrandFacebook, IconBrandGithub, IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
+import { IconBrandFacebook, IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {

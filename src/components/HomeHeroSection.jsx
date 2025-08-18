@@ -1,9 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HomeHeroSection = () => {
     return (
-        <div className='col-span-5 m-auto p-8 order-2 md:order-1'>
+        <div className='col-span-5 m-auto p-8'>
             <h3 className='text-slate-400 mb-2'>Hi I am,</h3>
             <h1 className='lg:text-7xl md:text-6xl text-4xl mb-4'>Hasibul Hasan</h1>
             <h6 className='mb-8 text-purple-500 text-xl md:text-2xl'>&gt; Front-end Developer</h6>
