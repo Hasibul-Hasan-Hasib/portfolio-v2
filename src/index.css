@@ -4,11 +4,16 @@ body {
   font-family: "Fira Code", monospace;
 }
 
+/* Pause animation on hover */
+.group:hover .pause-on-hover {
+  animation-play-state: paused;
+}
+
 @theme {
   /* 🎨 glitch animations */
-  --animate-glitch-shake: glitch-shake 10s infinite;
-  --animate-glitch-shake-slow: glitch-shake 8s infinite;
-  --animate-glitch-shake-fast: glitch-shake 3s infinite;
+  --animate-glitch-shake: glitch-shake 20s infinite;
+  --animate-glitch-shake-slow: glitch-shake 15s infinite;
+  --animate-glitch-shake-fast: glitch-shake 10s infinite;
   --animate-glitch-flash: glitch-flash 1s infinite;
   --animate-float: float 20s ease-in-out infinite;
 
