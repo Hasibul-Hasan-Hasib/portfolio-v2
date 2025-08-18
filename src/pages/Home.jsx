@@ -3,7 +3,7 @@ import HomeHeroSection from "../components/HomeHeroSection";
 
 const Home = () => {
     return (
-        <section className="grid grid-cols-1 md:grid-cols-10 col-span-8 place-items-center bg-gradient-to-b from-slate-800 to-slate-900 text-white">
+        <section className="grid grid-cols-1 md:grid-cols-10 flex-grow place-items-center bg-gradient-to-b from-slate-800 to-slate-900 text-white">
             <HomeHeroSection />
             <GlitchImage/>
         </section>

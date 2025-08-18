@@ -8,7 +8,7 @@ const Layout = () => {
         <div className='p-5 md:p-8 bg-slate-950 min-h-screen'>
             <div className='flex flex-col rounded-lg bg-slate-800 shadow-lg min-h-[calc(100vh-5rem)] border border-slate-500'>
                 <Header />
-                <main className='grid grid-cols-10 min-h-[calc(100vh-11.35rem)]'>
+                <main className='flex min-h-[calc(100vh-11.35rem)]'>
                     <SideBar></SideBar>
                     <Outlet />
                 </main>
