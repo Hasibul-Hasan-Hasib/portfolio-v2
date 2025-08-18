@@ -2,8 +2,8 @@ import React from 'react';
 
 const GlitchImage = () => {
     return (
-        <div className="col-span-5 p-8 hidden md:block">
-            <div className="group relative w-64 h-64 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden animate-float
+        <div className="col-span-5 p-8 order-1 md:order-2">
+            <div className="group relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden animate-float
                 before:absolute before:inset-0 before:rounded-full before:p-[2px]
                 before:bg-gradient-to-r before:from-pink-500 before:to-blue-500 before:animate-pulse before:blur-lg border-2 border-slate-500">
 

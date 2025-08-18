@@ -6,7 +6,7 @@ const Footer = () => {
     const linkClasses = `px-5 sm:px-8 py-4 border-l border-slate-500 hover:bg-slate-700 hover:text-slate-300`
 
     return (
-        <footer className="overflow-hidden mt-auto items-center text-slate-400 border-t border-slate-500">
+        <footer className="overflow-hidden mt-auto items-center text-slate-400 border-t border-slate-500 overflow-x-auto">
             <nav className="flex place-items-center">
                 <span className="px-6 sm:px-8 whitespace-nowrap">Find me in:</span>
                 <NavLink className={linkClasses} to="/">

@@ -9,8 +9,8 @@ const Header = () => {
         }`
 
     return (
-        <header className="md:grid grid-cols-10 items-center hidden text-slate-400 border-b border-slate-500 overflow-hidden">
-            <span className="px-7 col-span-2">hasibul-hasan</span>
+        <header className="grid grid-cols-10 items-center text-slate-400 border-b border-slate-500 overflow-x-auto">
+            <span className="px-7 col-span-2 hidden md:flex">hasibul-hasan</span>
             <nav className="col-span-8 flex items-center">
                 <NavLink to="/" className={linkClasses}>
                     _hello
@@ -28,7 +28,7 @@ const Header = () => {
                     _projects
                 </NavLink>
                 <NavLink to="/contact" className={({ isActive }) =>
-                    `ml-auto px-8 py-4 border-l border-slate-500 border-b-2 transition-colors ${
+                    `md:ml-auto px-8 py-4 border-x md:border-r-0 border-slate-500 border-b-2 transition-colors ${
                         isActive
                             ? "border-b-orange-500 text-slate-300"
                             : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"

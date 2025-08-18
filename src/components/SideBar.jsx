@@ -15,7 +15,7 @@ const Sidebar = () => {
         }`
 
     return (
-        <section className="flex bg-slate-900 text-slate-400 ">
+        <section className="hidden sm:flex bg-slate-900 text-slate-400 ">
             <nav className="flex flex-col place-items-center bg-slate-800">
                 <NavLink className={linkClasses} to="/">
                     <IconBrandLinkedin size={iconSize} />
@@ -27,7 +27,7 @@ const Sidebar = () => {
                     <IconBrandGithub size={iconSize} />
                 </NavLink>
             </nav>
-            <div className='hidden md:flex flex-col flex-grow-1'>
+            <div className='hidden md:flex flex-col flex-grow-1 min-w-[15.75vw]'>
                 <span className='flex place-items-center hover:bg-slate-800 p-4' onClick={() => setOpen(!open)}>{
                     open ? <IconChevronDown size={24} /> : <IconChevronRight size={24} />} Portfolio</span>
                 <ul className={`flex flex-col flex-grow-1 items-start p-4 transition-all duration-300 ${open ? 'block' : 'hidden'}`}>
