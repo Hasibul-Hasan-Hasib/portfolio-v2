@@ -1,19 +1,39 @@
 @import "tailwindcss";
 
 body {
-  font-family: "Fira Code";
+  font-family: "Fira Code", monospace;
 }
 
 @theme {
-  --spacing-1: 2px;
-  --spacing-2: 4px;
-  --spacing-3: 8px;
-  --spacing-4: 12px;
-  --spacing-5: 16px;
-  --spacing-6: 24px;
-  --spacing-7: 32px;
-  --spacing-8: 40px;
-  --spacing-9: 48px;
-  --spacing-10: 64px;
-}
+  /* 🎨 glitch animations */
+  --animate-glitch-shake: glitch-shake 10s infinite;
+  --animate-glitch-shake-slow: glitch-shake 8s infinite;
+  --animate-glitch-shake-fast: glitch-shake 3s infinite;
+  --animate-glitch-flash: glitch-flash 1s infinite;
+  --animate-float: float 20s ease-in-out infinite;
 
+  @keyframes glitch-shake {
+    0%, 100% { transform: translate(0,0); }
+    10% { transform: translate(-5px,-3px); }
+    20% { transform: translate(5px,3px); }
+    30% { transform: translate(-3px,5px); }
+    40% { transform: translate(3px,-5px); }
+    50% { transform: translate(-5px,3px); }
+    60% { transform: translate(5px,-3px); }
+    70% { transform: translate(-3px,-5px); }
+    80% { transform: translate(3px,5px); }
+    90% { transform: translate(-2px,2px); }
+  }
+
+  @keyframes glitch-flash {
+    0%, 100% { opacity: 0; }
+    25% { opacity: 25; }
+    50% { opacity: 50; }
+    75% { opacity: 75; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
