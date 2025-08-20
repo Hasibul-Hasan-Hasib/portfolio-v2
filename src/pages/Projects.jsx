@@ -4,7 +4,7 @@ import ProjectData from '../data/ProjectData';
 
 const Projects = () => {
     return (
-        <div className='grid grid-cols-12 flex-grow-1 justify-center p-4'>
+        <div className='grid grid-cols-12 gap-4 flex-grow-1 justify-center p-8'>
             {
                 ProjectData.map(project => (
                     <ProjectCard key={project.id} project={project} />
