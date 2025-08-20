@@ -9,6 +9,10 @@ body {
   animation-play-state: paused;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @theme {
   /* 🎨 glitch animations */
   --animate-glitch-shake: glitch-shake 20s infinite;
@@ -18,27 +22,62 @@ body {
   --animate-float: float 20s ease-in-out infinite;
 
   @keyframes glitch-shake {
-    0%, 100% { transform: translate(0,0); }
-    10% { transform: translate(-5px,-3px); }
-    20% { transform: translate(5px,3px); }
-    30% { transform: translate(-3px,5px); }
-    40% { transform: translate(3px,-5px); }
-    50% { transform: translate(-5px,3px); }
-    60% { transform: translate(5px,-3px); }
-    70% { transform: translate(-3px,-5px); }
-    80% { transform: translate(3px,5px); }
-    90% { transform: translate(-2px,2px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5px, -3px);
+    }
+    20% {
+      transform: translate(5px, 3px);
+    }
+    30% {
+      transform: translate(-3px, 5px);
+    }
+    40% {
+      transform: translate(3px, -5px);
+    }
+    50% {
+      transform: translate(-5px, 3px);
+    }
+    60% {
+      transform: translate(5px, -3px);
+    }
+    70% {
+      transform: translate(-3px, -5px);
+    }
+    80% {
+      transform: translate(3px, 5px);
+    }
+    90% {
+      transform: translate(-2px, 2px);
+    }
   }
 
   @keyframes glitch-flash {
-    0%, 100% { opacity: 0; }
-    25% { opacity: 25; }
-    50% { opacity: 50; }
-    75% { opacity: 75; }
+    0%,
+    100% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 25;
+    }
+    50% {
+      opacity: 50;
+    }
+    75% {
+      opacity: 75;
+    }
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
