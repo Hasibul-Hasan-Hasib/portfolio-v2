@@ -1,13 +1,13 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
+import ProjectData from '../data/ProjectData';
 
 const Projects = () => {
     return (
-        <div>
-            this is projects page
+        <div className='grid grid-cols-12 flex-grow-1 justify-center p-4'>
             {
-                [1,2,3,4,5,6,7,8,9,10].map(num => (
-                    <ProjectCard key={num} />
+                ProjectData.map(project => (
+                    <ProjectCard key={project.id} project={project} />
                 ))
             }
         </div>
