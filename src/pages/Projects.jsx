@@ -7,18 +7,17 @@ const containerVariants = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.15, // delay between each card
+            staggerChildren: 0.15, // delay between cards
         },
     },
 };
 
 const cardVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: 20 },
+    hidden: { opacity: 0, y: 50 }, // start lower
     visible: {
         opacity: 1,
-        scale: 1,
-        y: 0,
-        transition: { duration: 0.4, ease: "easeOut" },
+        y: 0, // move up to normal position
+        transition: { duration: 0.5, ease: "easeOut" },
     },
 };
 
@@ -34,7 +33,7 @@ const Projects = () => {
                 <motion.div
                     key={project.id}
                     variants={cardVariants}
-                    className="col-span-12 sm:col-span-6 lg:col-span-4" // ✅ keeps your grid sizing
+                    className="col-span-12 sm:col-span-6 lg:col-span-4"
                 >
                     <ProjectCard project={project} />
                 </motion.div>
