@@ -13,6 +13,22 @@ body {
   display: none;
 }
 
+/* Target Chrome autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #d1d5db !important; /* slate-300 */
+  transition: background-color 5000s ease-in-out 0s; /* prevent flash */
+}
+
+/* Optional: for Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -moz-text-fill-color: #d1d5db !important; /* slate-300 */
+}
+
+
 @theme {
   /* 🎨 glitch animations */
   --animate-glitch-shake: glitch-shake 20s infinite;
