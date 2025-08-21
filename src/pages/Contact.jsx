@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
     const [formState, setFormState] = useState({
@@ -8,6 +10,8 @@ const Contact = () => {
         message: "",
     });
 
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
         setFormState((prevState) => ({
@@ -16,11 +20,34 @@ const Contact = () => {
         }));
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formState);
-        setFormState({ name: "", email: "", message: "" });
+        setLoading(true);
+        setStatus("");
+
+        emailjs
+            .send(
+                import.meta.env.VITE_EMAIL_SERVICE_ID,
+                import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+                {
+                    from_name: formState.name,
+                    from_email: formState.email,
+                    to_name: "Hasibul Hasan", 
+                    message: formState.message,
+                },
+                import.meta.env.VITE_EMAIL_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setStatus("✅ Message sent successfully!");
+                    setFormState({ name: "", email: "", message: "" });
+                },
+                (error) => {
+                    console.error("FAILED...", error);
+                    setStatus("❌ Failed to send message. Try again!");
+                }
+            )
+            .finally(() => setLoading(false));
     };
 
     return (
@@ -41,7 +68,7 @@ const Contact = () => {
                     placeholder="Enter your name"
                     className="p-3 border border-gray-600 bg-transparent focus:border-orange-500 focus:ring-1 focus:ring-orange-500 rounded w-full shadow-md"
                     value={formState.name}
-                    
+                    required
                 />
 
                 <label htmlFor="email" className="text-slate-400 font-mono">_email:</label>
@@ -52,7 +79,7 @@ const Contact = () => {
                     placeholder="Enter your email"
                     className="p-3 border border-gray-600 bg-transparent focus:border-orange-500 focus:ring-1 focus:ring-orange-500 rounded w-full shadow-md"
                     value={formState.email}
-                    
+                    required
                 />
 
                 <label htmlFor="message" className="text-slate-400 font-mono">_message:</label>
@@ -62,7 +89,7 @@ const Contact = () => {
                     placeholder="Enter your message"
                     className="p-3 border border-gray-600 bg-transparent focus:border-orange-500 focus:ring-1 focus:ring-orange-500 rounded w-full shadow-md h-32"
                     value={formState.message}
-                    
+                    required
                 />
 
                 <motion.button
@@ -70,10 +97,16 @@ const Contact = () => {
                     className="bg-orange-600 text-white w-fit py-2 px-8 rounded shadow-lg hover:bg-orange-700 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    disabled={loading}
                 >
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                 </motion.button>
+
+                {status && <p className="text-sm mt-2">{status}</p>}
             </motion.form>
+
+
+
 
             {/* Live Preview Section */}
             <motion.div
@@ -92,7 +125,7 @@ const Contact = () => {
                         <span className="text-green-400"> * 💼 LinkedIn: linkedin.com/in/your-profile</span>,
                         <span className="text-green-400"> * 📘 Facebook: facebook.com/your.username</span>,
                         <span className="text-green-400"> * 📷 Instagram: instagram.com/your.username</span>,
-                        <span className="text-green-400"> */</span>,
+                        <span className="text-green-400"> **/</span>,
                         <span></span>,
                         <span></span>,
 
@@ -131,7 +164,6 @@ const Contact = () => {
                     ))}
                 </div>
             </motion.div>
-
         </section >
     );
 };
