@@ -1,3 +1,4 @@
+/*************  ✨ Windsurf Command 🌟  *************/
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { IconCode, IconStar, IconInfoCircle } from "@tabler/icons-react";
@@ -58,6 +59,23 @@ console.log("MongoDB Connected 🍃");`,
     },
 ];
 
+const aboutMe = `/** 
+ * About Me:
+ * I am a passionate Full Stack Web Developer with a strong
+ * foundation in Computer Science and hands-on experience
+ * in building modern, user-focused applications.
+ *
+ * Skilled in the MERN stack and RESTful APIs,
+ * I create scalable, impactful, and user-friendly web solutions.
+ *
+ * I’m especially passionate about AI integration in web apps,
+ * exploring innovative ways to deliver seamless,
+ * forward-thinking digital experiences.
+ *
+ * My goal is to help clients achieve their vision through
+ * reliable, creative, and efficient solutions.
+ **/`;
+
 const About = () => {
     const [isDownloading, setIsDownloading] = useState(false);
 
@@ -83,38 +101,19 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
             >
-                <div className="w-full text-sm text-slate-300 overflow-auto p-4 leading-relaxed flex flex-col">
-                    {[
-                        <span className="text-slate-400">/**</span>,
-                        <span className="text-slate-400"> * About Me:</span>,
-                        <span className="text-slate-400"> * I am a passionate Full Stack Web Developer with a strong</span>,
-                        <span className="text-slate-400"> * foundation in Computer Science and hands-on experience</span>,
-                        <span className="text-slate-400"> * in building modern, user-focused applications.</span>,
-                        <span className="text-slate-400"> *</span>,
-                        <span className="text-slate-400"> * Skilled in the MERN stack and RESTful APIs,</span>,
-                        <span className="text-slate-400"> * I create scalable, impactful, and user-friendly web solutions.</span>,
-                        <span className="text-slate-400"> *</span>,
-                        <span className="text-slate-400"> * I’m especially passionate about AI integration in web apps,</span>,
-                        <span className="text-slate-400"> * exploring innovative ways to deliver seamless,</span>,
-                        <span className="text-slate-400"> * forward-thinking digital experiences.</span>,
-                        <span className="text-slate-400"> *</span>,
-                        <span className="text-slate-400"> * My goal is to help clients achieve their vision through</span>,
-                        <span className="text-slate-400"> * reliable, creative, and efficient solutions.</span>,
-                        <span className="text-slate-400"> **/</span>,
-                        <span></span>,
-                        <span></span>,
-                    ].map((line, i) => (
-                        <div key={i} className="flex">
-                            {/* Line number */}
-                            <div className="w-10 text-right pr-4 text-slate-500 select-none">
-                                {i + 1}
-                            </div>
-                            {/* Code line */}
-                            <div className="flex-1">{line}</div>
-                        </div>
-                    ))}
-                </div>
-                <div className="py-4 px-14 flex justify-start">
+                <SyntaxHighlighter
+                    showLineNumbers
+                    language="javascript"
+                    style={nightOwl}
+                    customStyle={{
+                        margin: 0,
+                        padding: "1rem",
+                        background: "transparent",
+                    }}
+                >
+                    {aboutMe}
+                </SyntaxHighlighter>
+                <div className="py-4 px-16 flex justify-start">
                     <motion.button
                         className="bg-orange-600 text-white w-fit py-2 px-8 rounded shadow-lg hover:bg-orange-700 transition-colors"
                         whileHover={{ scale: 1.05 }}
@@ -126,8 +125,6 @@ const About = () => {
                     </motion.button>
                 </div>
             </motion.div>
-
-
 
             {/* Code Snippets for Each Technology */}
             <motion.div
@@ -154,6 +151,7 @@ const About = () => {
 
                         {/* Syntax highlighted code */}
                         <SyntaxHighlighter
+                            showLineNumbers
                             language={tech.lang}
                             style={nightOwl}
                             customStyle={{
@@ -173,3 +171,6 @@ const About = () => {
 };
 
 export default About;
+
+
+/*******  a9002972-7492-4975-9969-8e6eb57dd737  *******/
