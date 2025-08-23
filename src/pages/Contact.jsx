@@ -130,7 +130,7 @@ export default message;
 
             {/* Live Preview Section */}
             <motion.div
-                className="md:col-span-1 border-t md:border-t-0 md:border-l border-slate-700 overflow-auto"
+                className="md:col-span-1 border-t md:border-t-0 md:border-l border-slate-700"
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}

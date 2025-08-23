@@ -1,12 +1,12 @@
-// Sidebar.js
 import { useState } from "react"
 import { useNavigate, NavLink } from "react-router-dom"
 import {
-    IconBrandFacebook,
-    IconBrandGithub,
-    IconBrandLinkedin,
     IconChevronDown,
     IconChevronRight,
+    IconFiles,
+    IconGitFork,
+    IconMail,
+    IconUserCircle,
 } from "@tabler/icons-react"
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
@@ -23,16 +23,22 @@ const Sidebar = () => {
         }`
 
     return (
-        <section className="hidden sm:flex bg-slate-900 text-slate-400 ">
-            <nav className="flex flex-col place-items-center bg-slate-800">
-                <NavLink className={linkClasses} to="/">
-                    <IconBrandLinkedin size={iconSize} />
-                </NavLink>
-                <NavLink className={linkClasses} to="/projects">
-                    <IconBrandFacebook size={iconSize} />
-                </NavLink>
+        <section className="hidden sm:flex bg-slate-900 text-slate-400">
+            <nav className="flex flex-col justify-between flex-grow bg-slate-800">
+                {/* Top links */}
+                <div className="flex flex-col">
+                    <NavLink className={linkClasses} to="/">
+                        <IconFiles size={iconSize} />
+                    </NavLink>
+                    <NavLink className={linkClasses} to="/projects">
+                        <IconGitFork size={iconSize} />
+                    </NavLink>
+                    <NavLink className={linkClasses} to="/contact">
+                        <IconMail size={iconSize} />
+                    </NavLink>
+                </div>
                 <NavLink className={linkClasses} to="/about">
-                    <IconBrandGithub size={iconSize} />
+                    <IconUserCircle size={iconSize} />
                 </NavLink>
             </nav>
 
