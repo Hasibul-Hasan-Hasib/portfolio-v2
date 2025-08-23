@@ -1,7 +1,9 @@
 import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const Contact = () => {
     const [formState, setFormState] = useState({
@@ -32,7 +34,7 @@ const Contact = () => {
                 {
                     from_name: formState.name,
                     from_email: formState.email,
-                    to_name: "Hasibul Hasan", 
+                    to_name: "Hasibul Hasan",
                     message: formState.message,
                 },
                 import.meta.env.VITE_EMAIL_PUBLIC_KEY
@@ -49,6 +51,27 @@ const Contact = () => {
             )
             .finally(() => setLoading(false));
     };
+
+    // Build the code string for SyntaxHighlighter
+    const codeString = `
+/**
+ * Contact Information:
+ * 📞 Phone: +880 1533 679 970
+ * 💬 WhatsApp: +880 1766 848 008
+ * 🐙 GitHub: https://github.com/Hasibul-Hasan-Hasib
+ * 💼 LinkedIn: linkedin.com/in/your-profile
+ * 📘 Facebook: facebook.com/your.username
+ * 📷 Instagram: instagram.com/your.username
+ **/
+
+const message = {
+  name: "${formState.name || "Your name"}",
+  email: "${formState.email || "your.email@example.com"}",
+  message: "${formState.message || "Your message here..."}"
+};
+
+export default message;
+`;
 
     return (
         <section className="h-[calc(100vh-10rem)] md:h-[calc(100vh-11.35rem)] flex-grow-1 grid grid-cols-1 md:grid-cols-2 text-slate-300 bg-gradient-to-b from-slate-900 to-slate-800 overflow-y-auto no-scrollbar">
@@ -105,66 +128,28 @@ const Contact = () => {
                 {status && <p className="text-sm mt-2">{status}</p>}
             </motion.form>
 
-
-
-
             {/* Live Preview Section */}
             <motion.div
-                className="md:col-span-1 flex flex-col border-t md:border-t-0 md:border-l border-slate-700"
+                className="md:col-span-1 border-t md:border-t-0 md:border-l border-slate-700 overflow-auto"
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
             >
-                <div className="w-full h-full text-sm text-slate-300 overflow-auto p-4 leading-relaxed">
-                    {[
-                        <span className="text-green-400">/**</span>,
-                        <span className="text-green-400"> * Contact Information:</span>,
-                        <span className="text-green-400"> * 📞 Phone: {formState.phone || "+880 1533 679 970"}</span>,
-                        <span className="text-green-400"> * 💬 WhatsApp: {formState.whatsapp || "+880 1766 848 008"}</span>,
-                        <span className="text-green-400"> * 🐙 GitHub: https://github.com/Hasibul-Hasan-Hasib</span>,
-                        <span className="text-green-400"> * 💼 LinkedIn: linkedin.com/in/your-profile</span>,
-                        <span className="text-green-400"> * 📘 Facebook: facebook.com/your.username</span>,
-                        <span className="text-green-400"> * 📷 Instagram: instagram.com/your.username</span>,
-                        <span className="text-green-400"> **/</span>,
-                        <span></span>,
-                        <span></span>,
-
-                        <span className="text-pink-400">const <span className="text-purple-400">message</span> = {"{"}</span>,
-
-                        <span className="pl-6">
-                            name<span className="text-pink-400">:</span> <span className="text-amber-200">{`"${formState.name || "Your name"}"`}</span>,
-                        </span>,
-
-                        <span className="pl-6 ">
-                            email<span className="text-pink-400">:</span> <span className="text-amber-200">{`"${formState.email || "your.email@example.com"}"`}</span>,
-                        </span>,
-
-                        <span className="pl-6 ">
-                            message<span className="text-pink-400">:</span> <span className="text-amber-200">{`"${formState.message || "Your message here..."}"`}</span>
-                        </span>,
-                        <span className="text-pink-400">{"}"}</span>,
-                        <span></span>,
-                        <span></span>,
-                        <span className="text-pink-400">
-                            export default<span className="text-purple-400"> message</span>;
-                        </span>,
-                        <span></span>,
-                        <span></span>,
-                        <span></span>,
-
-                    ].map((line, i) => (
-                        <div key={i} className="flex">
-                            {/* Line number */}
-                            <div className="w-10 text-right pr-4 text-slate-500 select-none">
-                                {i + 1}
-                            </div>
-                            {/* Code line */}
-                            <div className="flex-1">{line}</div>
-                        </div>
-                    ))}
-                </div>
+                <SyntaxHighlighter
+                    language="javascript"
+                    style={nightOwl}
+                    wrapLines
+                    showLineNumbers
+                    customStyle={{
+                            margin: 0,
+                            padding: "1rem",
+                            background: "transparent",
+                        }}
+                >
+                    {codeString}
+                </SyntaxHighlighter>
             </motion.div>
-        </section >
+        </section>
     );
 };
 

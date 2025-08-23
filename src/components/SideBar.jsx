@@ -8,6 +8,7 @@ import {
     IconChevronDown,
     IconChevronRight,
 } from "@tabler/icons-react"
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
 
 const Sidebar = () => {

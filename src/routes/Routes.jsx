@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import LoadingPage from '../pages/LoadingPage';
 
 // Lazy load only the pages you have
 const Layout = lazy(() => import('../layout/Layout'));
@@ -18,7 +19,7 @@ export const Routes = createBrowserRouter([
             {
                 path: "",
                 element: (
-                    <Suspense fallback={<div>Loading home page...</div>}>
+                    <Suspense fallback={<LoadingPage />}>
                         <Home />
                     </Suspense>
                 ),
@@ -26,7 +27,7 @@ export const Routes = createBrowserRouter([
             {
                 path: "about",
                 element: (
-                    <Suspense fallback={<div>Loading home page...</div>}>
+                    <Suspense fallback={<LoadingPage />}>
                         <About />
                     </Suspense>
                 ),
@@ -34,7 +35,7 @@ export const Routes = createBrowserRouter([
             {
                 path: "projects",
                 element: (
-                    <Suspense fallback={<div>Loading home page...</div>}>
+                    <Suspense fallback={<LoadingPage />}>
                         <Projects />
                     </Suspense>
                 ),
@@ -42,8 +43,16 @@ export const Routes = createBrowserRouter([
             {
                 path: "contact",
                 element: (
-                    <Suspense fallback={<div>Loading home page...</div>}>
+                    <Suspense fallback={<LoadingPage />}>
                         <Contact />
+                    </Suspense>
+                ),
+            },
+            {
+                path: "loading",
+                element: (
+                    <Suspense fallback={<LoadingPage />}>
+                        <LoadingPage />
                     </Suspense>
                 ),
             },
@@ -52,9 +61,10 @@ export const Routes = createBrowserRouter([
     {
         path: "*",
         element: (
-            <Suspense fallback={<div>Loading not found page...</div>}>
+            <Suspense fallback={<LoadingPage />}>
                 <NotFound />
             </Suspense>
         ),
     },
 ]);
+
