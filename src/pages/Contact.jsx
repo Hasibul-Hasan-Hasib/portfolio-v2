@@ -117,7 +117,7 @@ export default message;
 
                 <motion.button
                     type="submit"
-                    className="bg-orange-600 text-white w-fit py-2 px-8 rounded shadow-lg hover:bg-orange-700 transition-colors"
+                    className="bg-teal-600 text-white w-fit py-2 px-8 rounded shadow-lg hover:bg-teal-700 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     disabled={loading}

@@ -18,7 +18,7 @@ const Sidebar = () => {
     const iconSize = 32
     const linkClasses = ({ isActive }) =>
         `p-4 border-slate-500 border-l-2 transition-colors ${isActive
-            ? "border-l-orange-500 text-slate-300"
+            ? "border-l-teal-500 text-slate-300"
             : "border-l-transparent hover:bg-slate-700 hover:text-slate-300"
         }`
 
@@ -103,3 +103,4 @@ const menuItems = [
 ]
 
 export default Sidebar
+

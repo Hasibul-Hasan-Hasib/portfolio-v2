@@ -9,7 +9,7 @@ const Header = () => {
 
     const linkClasses = ({ isActive }) =>
         `px-7 py-4 border-l border-slate-500 border-b-2 transition-colors ${isActive
-            ? "border-b-orange-500 text-slate-300"
+            ? "border-b-teal-500 text-slate-300"
             : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"
         }`;
 
@@ -49,7 +49,7 @@ const Header = () => {
                         to="/projects"
                         className={({ isActive }) =>
                             `px-7 py-4 border-x border-slate-500 border-b-2 transition-colors ${isActive
-                                ? "border-b-orange-500 text-slate-300"
+                                ? "border-b-teal-500 text-slate-300"
                                 : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"
                             }`
                         }
@@ -60,7 +60,7 @@ const Header = () => {
                         to="/contact"
                         className={({ isActive }) =>
                             `md:ml-auto px-8 py-4 border-x md:border-r-0 border-slate-500 border-b-2 transition-colors ${isActive
-                                ? "border-b-orange-500 text-slate-300"
+                                ? "border-b-teal-500 text-slate-300"
                                 : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"
                             }`
                         }
@@ -100,7 +100,7 @@ const Header = () => {
                                 to="/projects"
                                 className={({ isActive }) =>
                                     `px-7 py-4 border-x border-slate-500 border-b-2 transition-colors ${isActive
-                                        ? "border-b-orange-500 text-slate-300"
+                                        ? "border-b-teal-500 text-slate-300"
                                         : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"
                                     }`
                                 }
@@ -112,7 +112,7 @@ const Header = () => {
                                 to="/contact"
                                 className={({ isActive }) =>
                                     `px-8 py-4 border-x border-slate-500 border-b-2 transition-colors ${isActive
-                                        ? "border-b-orange-500 text-slate-300"
+                                        ? "border-b-teal-500 text-slate-300"
                                         : "border-b-transparent hover:bg-slate-700 hover:text-slate-300"
                                     }`
                                 }
@@ -129,3 +129,4 @@ const Header = () => {
 };
 
 export default Header;
+

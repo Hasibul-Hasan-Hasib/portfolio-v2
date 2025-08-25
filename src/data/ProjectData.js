@@ -1,61 +1,54 @@
 const ProjectData = [
     {
         id: 1,
-        title: "Project One",
-        description: "This is the first project.",
+        title: "SkillZone",
+        description: "Developed a full-featured website for SkillZone, a leading IT training institute in Chittagong. The platform showcases courses, categories, and institute information with a clean UI and responsive design, built to improve accessibility for students and potential learners.",
         technologies: ["JavaScript", "React", "Node.js"],
-        link: "https://example.com/project-one",
-        image: "/ChatGPT Image Aug 18, 2025, 01_30_44 AM.png"
-    },
-    {
-        id: 1,
-        title: "Project One",
-        description: "This is the first project.",
-        technologies: ["JavaScript", "React", "Node.js"],
-        link: "https://example.com/project-one",
-        image: "/ChatGPT Image Aug 18, 2025, 01_30_44 AM.png"
-    },
-    {
-        id: 1,
-        title: "Project One",
-        description: "This is the first project.",
-        technologies: ["JavaScript", "React", "Node.js"],
-        link: "https://example.com/project-one",
-        image: "/ChatGPT Image Aug 18, 2025, 01_30_44 AM.png"
-    },
-    {
-        id: 1,
-        title: "Project One",
-        description: "This is the first project.",
-        technologies: ["JavaScript", "React", "Node.js"],
-        link: "https://example.com/project-one",
-        image: "/ChatGPT Image Aug 18, 2025, 01_30_44 AM.png"
-    },
-    {
-        id: 1,
-        title: "Project One",
-        description: "This is the first project.",
-        technologies: ["JavaScript", "React", "Node.js"],
-        link: "https://example.com/project-one",
-        image: "/ChatGPT Image Aug 18, 2025, 01_30_44 AM.png"
+        link: "https://skillzonebd.com",
+        github: {
+            frontend: "https://github.com/hasibul-hasan-hasib/skillzone",
+            backend: "https://github.com/hasibul-hasan-hasib/skillzone-backend"
+        },
+        image: "/Skill-Zone-Best-IT-Institute-in-Chittagong-08-25-2025_11_36_AM.png",
     },
     {
         id: 2,
-        title: "Project Two",
-        description: "This is the second project.",
-        technologies: ["Python", "Django", "PostgreSQL"],
-        link: "https://example.com/project-two",
-        image: "https://example.com/images/project-two.jpg"
+        title: "Turrido",
+        description: "Turido is a travel platform where users can explore destinations and book tours. It features easy search, filtering, and reviews to help travelers find and book the best experiences.",
+        technologies: ["JavaScript", "React", "Node.js"],
+        link: "https://turrido-d48b2.web.app/",
+        github: {
+            frontend: "https://github.com/hasibul-hasan-hasib/turrido-client",
+            backend: "https://github.com/hasibul-hasan-hasib/turrido-server"
+        },
+        image: "/Turrido-08-25-2025_11_38_AM.png",
     },
     {
         id: 3,
-        title: "Project Three",
-        description: "This is the third project.",
-        technologies: ["Java", "Spring Boot", "MySQL"],
-        link: "https://example.com/project-three",
-        image: "https://example.com/images/project-three.jpg"
-    }
+        title: "Hourent",
+        description: "Hourent is a user-friendly rental management platform that allows individuals to browse, book, and manage rental houses and apartments.",
+        technologies: ["JavaScript", "React", "Node.js"],
+        link: "https://hourent.netlify.app/",
+        github: {
+            frontend: "https://github.com/hasibul-hasan-hasib/hourent",
+            backend: "https://github.com/hasibul-hasan-hasib/hourent-server"
+        },
+        image: "/React-App-08-24-2025_07_27_PM.png",
+    },
+    {
+        id: 4,
+        title: "WMK Trust",
+        description: "Built a web platform for collecting donations and displaying donor information to admins. Included real-time analytics, donor data management, and secure tracking of donation trends.",
+        technologies: ["JavaScript", "React", "Node.js"],
+        link: "https://wmktrust.netlify.app/",
+        github: {
+            frontend: "https://github.com/hasibul-hasan-hasib/wmktrust-client",
+            backend: "https://github.com/hasibul-hasan-hasib/wmktrust-server"
+        },
+        image: "/React-App-08-24-2025_07_27_PM.png",
+    },
 ]
 
 
 export default ProjectData;
+
