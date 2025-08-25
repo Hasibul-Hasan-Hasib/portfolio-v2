@@ -27,7 +27,7 @@ const AboutMe = () => {
     const downloadCV = () => {
         setIsDownloading(true);
         const link = document.createElement("a");
-        link.href = "/Hasibul_Hasan_CV.pdf";
+        link.href = "/Resume.pdf";
         link.setAttribute("download", "Hasibul_Hasan_CV.pdf");
         document.body.appendChild(link);
         link.click();

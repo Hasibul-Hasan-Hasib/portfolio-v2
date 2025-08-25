@@ -5,7 +5,7 @@ import HomeHeroSection from "../components/HomeHeroSection"
 
 const Home = () => {
     return (
-        <section className="grid grid-cols-1 md:grid-cols-10 flex-grow place-items-center bg-gradient-to-b from-slate-800 to-slate-900 text-slate-300 h-[calc(100vh-10rem)] md:h-[calc(100vh-11.35rem)] overflow-y-auto no-scrollbar">
+        <section className="grid grid-cols-1 md:grid-cols-10 flex-grow place-items-center bg-gradient-to-b from-slate-800 to-slate-900 text-slate-300 h-[calc(100vh-8.5rem)] md:h-[calc(100vh-11.35rem)] overflow-y-auto no-scrollbar">
             {/* Hero Section animation */}
             <motion.div
                 initial={{ opacity: 0, y: 60 }}

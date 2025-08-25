@@ -74,7 +74,7 @@ export default message;
 `;
 
     return (
-        <section className="h-[calc(100vh-10rem)] md:h-[calc(100vh-11.35rem)] flex-grow-1 grid grid-cols-1 md:grid-cols-2 text-slate-300 bg-gradient-to-b from-slate-900 to-slate-800 overflow-y-auto no-scrollbar">
+        <section className="h-[calc(100vh-8.5rem)] md:h-[calc(100vh-11.35rem)] flex-grow-1 grid grid-cols-1 md:grid-cols-2 text-slate-300 bg-gradient-to-b from-slate-900 to-slate-800 overflow-y-auto no-scrollbar">
             {/* Form Section */}
             <motion.form
                 onSubmit={handleSubmit}

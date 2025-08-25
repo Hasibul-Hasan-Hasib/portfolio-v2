@@ -5,12 +5,12 @@ import SideBar from '../components/SideBar'
 
 const Layout = () => {
     return (
-        <div className='p-5 md:p-8 bg-slate-950 min-h-screen'>
-            <div className='flex flex-col rounded-lg bg-slate-800 shadow-lg min-h-[calc(100vh-2.5rem)] md:min-h-[calc(100vh-11.35rem)] border border-slate-500'>
+        <div className='p-2 sm:mp-5 md:p-8 bg-slate-950 h-screen'>
+            <div className='flex flex-col rounded-lg bg-slate-800 shadow-lg h-full border border-slate-500'>
                 <Header />
                 <div className='flex'>
                     <SideBar></SideBar>
-                    <main className='flex min-h-[calc(100vh-11.35rem)] overflow-hidden w-full'>
+                    <main className='flex w-full'>
                         <Outlet />
                     </main>
                 </div>
