@@ -59,9 +59,9 @@ const Contact = () => {
  * 📞 Phone: +880 1533 679 970
  * 💬 WhatsApp: +880 1766 848 008
  * 🐙 GitHub: https://github.com/Hasibul-Hasan-Hasib
- * 💼 LinkedIn: linkedin.com/in/your-profile
- * 📘 Facebook: facebook.com/your.username
- * 📷 Instagram: instagram.com/your.username
+ * 💼 LinkedIn: https://www.linkedin.com/in/md-hasibul-hasan-hasib
+ * 📘 Facebook: https://www.facebook.com/hasibulhasan.hasib.1654
+ * 📷 Instagram: https://www.instagram.com/hasibulhsb
  **/
 
 const message = {
@@ -139,12 +139,18 @@ export default message;
                     language="javascript"
                     style={nightOwl}
                     wrapLines
-                    showLineNumbers
+                    showLineNumbers={window.innerWidth > 640}
                     customStyle={{
-                            margin: 0,
-                            padding: "1rem",
-                            background: "transparent",
-                        }}
+                        margin: 0,
+                        padding: "1rem",
+                        background: "transparent",
+                        whiteSpace: "pre-wrap", wordBreak: "break-all"
+                    }}
+                    codeTagProps={{
+                        style: {
+                            whiteSpace: "pre-wrap", wordBreak: "break-all"
+                        },
+                    }}
                 >
                     {codeString}
                 </SyntaxHighlighter>

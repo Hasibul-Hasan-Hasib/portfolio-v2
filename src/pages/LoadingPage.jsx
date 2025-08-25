@@ -25,7 +25,7 @@ const LoadingPage = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-400">
+    <div className="w-full h-[calc(100vh-8.5rem)] md:h-[calc(100vh-11.35rem)] flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-400">
       
       {/* Smooth logo or text */}
       <motion.h1

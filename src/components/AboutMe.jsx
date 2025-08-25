@@ -21,6 +21,7 @@ const aboutMeText = `/**
  * reliable, creative, and efficient solutions.
  **/`;
 
+
 const AboutMe = () => {
     const [isDownloading, setIsDownloading] = useState(false);
 
@@ -44,11 +45,17 @@ const AboutMe = () => {
             <SyntaxHighlighter
                 language="javascript"
                 style={nightOwl}
-                showLineNumbers
+                showLineNumbers={window.innerWidth > 640}
                 customStyle={{
                     margin: 0,
                     padding: "1rem",
                     background: "transparent",
+                    whiteSpace: "pre-wrap", wordBreak: "break-all"
+                }}
+                codeTagProps={{
+                    style: {
+                        whiteSpace: "pre-wrap", wordBreak: "break-all"
+                    },
                 }}
             >
                 {aboutMeText}
