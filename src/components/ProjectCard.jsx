@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
 
     return (
         <div className='h-full col-span-12 md:col-span-6 lg:col-span-4 flex flex-col text-slate-400 border p-4 rounded-lg hover:shadow-lg shadow-teal-500 transition-all duration-400 bg-slate-900 hover:translate-y-[-5px]'>
-            <img src={project.image} className="mb-2 aspect-video object-cover" alt="" />
+            <img src={project.image} className="mb-2 aspect-video object-cover rounded-md" alt="" />
             <h2 className='text-xl text-slate-300 font-semibold my-4'>{project.title}</h2>
                 <div className='min-h-20 mb-4'>
                     <span>{project.description.length > 90 ? seeMore ? project.description : `${project.description.slice(0, 98)}... ` : project.description}</span>

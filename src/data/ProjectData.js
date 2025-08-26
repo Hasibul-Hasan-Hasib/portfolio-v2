@@ -3,7 +3,7 @@ const ProjectData = [
         id: 1,
         title: "SkillZone",
         description: "Developed a full-featured website for SkillZone, a leading IT training institute in Chittagong. The platform showcases courses, categories, and institute information with a clean UI and responsive design, built to improve accessibility for students and potential learners.",
-        technologies: ["JavaScript", "React", "Node.js"],
+        technologies: ["MongoDB", "Express", "React", "Node.js", "Tailwind", "React Query", "Firebase"],
         link: "https://skillzonebd.com",
         github: {
             frontend: "https://github.com/hasibul-hasan-hasib/skillzone",
@@ -15,7 +15,7 @@ const ProjectData = [
         id: 2,
         title: "Turrido",
         description: "Turido is a travel platform where users can explore destinations and book tours. It features easy search, filtering, and reviews to help travelers find and book the best experiences.",
-        technologies: ["JavaScript", "React", "Node.js"],
+        technologies: ["React", "Tailwind", "Redux Toolkit", "Firebase", "Node.js", "MongoDB", "Express"],
         link: "https://turrido-d48b2.web.app/",
         github: {
             frontend: "https://github.com/hasibul-hasan-hasib/turrido-client",
@@ -27,7 +27,7 @@ const ProjectData = [
         id: 3,
         title: "Hourent",
         description: "Hourent is a user-friendly rental management platform that allows individuals to browse, book, and manage rental houses and apartments.",
-        technologies: ["JavaScript", "React", "Node.js"],
+        technologies: [ "React", "Tailwind", "Firebase", "Node.js", "MongoDB", "Express"],
         link: "https://hourent.netlify.app/",
         github: {
             frontend: "https://github.com/hasibul-hasan-hasib/hourent",
@@ -39,7 +39,7 @@ const ProjectData = [
         id: 4,
         title: "WMK Trust",
         description: "Built a web platform for collecting donations and displaying donor information to admins. Included real-time analytics, donor data management, and secure tracking of donation trends.",
-        technologies: ["JavaScript", "React", "Node.js"],
+        technologies: ["React", "Node.js"," MongoDB", "Express", "Tailwind", "Auth0"],
         link: "https://wmktrust.netlify.app/",
         github: {
             frontend: "https://github.com/hasibul-hasan-hasib/wmktrust-client",

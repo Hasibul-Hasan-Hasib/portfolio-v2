@@ -2,56 +2,14 @@
 import { motion } from "framer-motion";
 
 const LoadingPage = () => {
-  // Container variants for staggering children
-  const containerVariants = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2,
-        repeat: Infinity,
-        repeatType: "loop",
-      },
-    },
-  };
-
-  // Dot animation
-  const dotVariants = {
-    animate: {
-      y: [0, -12, 0],
-      transition: {
-        duration: 0.6,
-        ease: "easeInOut",
-      },
-    },
-  };
 
   return (
-    <div className="w-full h-[calc(100vh-8.5rem)] md:h-[calc(100vh-11.35rem)] flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-400">
-      
-      {/* Smooth logo or text */}
-      <motion.h1
-        initial={{ opacity: 0, scale: 0.85 }}
-        animate={{ opacity: 0.5, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-semibold mb-12 tracking-wide"
-      >
-        Loading
-      </motion.h1>
+    <section className="w-full h-[calc(100vh-8.5rem)] md:h-[calc(100vh-11.35rem)] flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-400">
+        <div class="bg-teal-500 w-48 h-48 absolute animate-ping rounded-full delay-5s shadow-xl"></div>
+        <div class="bg-teal-400 w-32 h-32 absolute animate-ping rounded-full shadow-xl"></div>
+        <img src="/micro-projects-favicon-color.png" alt="" />
+    </section >
 
-      {/* Container for dots with stagger */}
-      <motion.div
-        className="flex space-x-4"
-        variants={containerVariants}
-        animate="animate"
-      >
-        {[0, 1, 2].map((i) => (
-          <motion.div
-            key={i}
-            className="w-4 h-4 rounded-full bg-slate-300 opacity-80 shadow-md"
-            variants={dotVariants}
-          />
-        ))}
-      </motion.div>
-    </div>
   );
 };
 
