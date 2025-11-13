@@ -30,10 +30,10 @@ const ProjectData = [
         technologies: [ "React", "Tailwind", "Firebase", "Node.js", "MongoDB", "Express"],
         link: "https://hourent.netlify.app/",
         github: {
-            frontend: "https://github.com/hasibul-hasan-hasib/hourent",
+            frontend: "https://github.com/hasibul-hasan-hasib/hourent-client",
             backend: "https://github.com/hasibul-hasan-hasib/hourent-server"
         },
-        image: "/React-App-08-24-2025_07_27_PM.png",
+        image: "/hourent-client-11-13-2025_04_44_PM.png",
     },
     {
         id: 4,
